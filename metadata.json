@@ -1,0 +1,6 @@
+{
+  "name": "Subscription Alert",
+  "description": "Smart subscription manager, bill reminder, and expense analytics mobile app with AI spending insights and receipt OCR scanner.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
