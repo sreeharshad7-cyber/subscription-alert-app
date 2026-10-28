@@ -1,1 +1,91 @@
 @import "tailwindcss";
+
+/* Ledger / subscription finance design system */
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #19231f;
+  background: #f5f5f0;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --paper: #f5f5f0;
+  --panel: #fffefa;
+  --ink: #19231f;
+  --muted: #748078;
+  --line: #e2e5dd;
+  --green: #baf36a;
+  --green-ink: #24391b;
+  --accent: #dfffbb;
+  --warn: #f0c36a;
+}
+
+html, body, #root { min-height: 100%; }
+body { margin: 0; background: var(--paper); }
+button, input, select, textarea { font: inherit; }
+button { -webkit-tap-highlight-color: transparent; }
+::selection { background: #c9f59d; color: #19231f; }
+* { scrollbar-width: thin; scrollbar-color: #c6cec0 transparent; }
+
+.ledger-shell {
+  background:
+    radial-gradient(ellipse at 90% 0%, rgba(186,243,106,.14), transparent 28rem),
+    var(--paper);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+}
+.ledger-shell h1, .ledger-shell h2, .ledger-shell h3, .ledger-shell h4 {
+  font-family: 'Manrope', sans-serif;
+  letter-spacing: -0.035em;
+}
+.ledger-shell .ledger-mono {
+  font-family: 'DM Mono', monospace;
+  letter-spacing: -0.04em;
+}
+.ledger-shell .ledger-card {
+  border: 1px solid var(--line) !important;
+  border-radius: 1.1rem !important;
+  background: rgba(255,254,250,.92) !important;
+  box-shadow: 0 1px 1px rgba(25,35,31,.025) !important;
+}
+.ledger-shell .ledger-muted { color: var(--muted) !important; }
+.ledger-shell .ledger-button-primary {
+  background: var(--green) !important;
+  color: var(--green-ink) !important;
+  border: 1px solid #a7df5c !important;
+  border-radius: .8rem !important;
+}
+.ledger-shell .ledger-button-primary:hover { background: #cef99b !important; }
+.ledger-shell .ledger-banner {
+  background: #202b26 !important;
+  color: #f7faef !important;
+  border: 1px solid #35443b !important;
+  border-radius: 1.25rem !important;
+  box-shadow: none !important;
+}
+.ledger-shell .ledger-banner h1,
+.ledger-shell .ledger-banner h2,
+.ledger-shell .ledger-banner h3,
+.ledger-shell .ledger-banner p { color: inherit; }
+.ledger-shell .ledger-accent { color: var(--green) !important; }
+.ledger-shell .ledger-rule { border-color: var(--line) !important; }
+.ledger-shell .ledger-pill {
+  border-radius: 999px !important;
+  border: 1px solid #dce4d5 !important;
+  background: #f0f5e8 !important;
+  color: #42543a !important;
+}
+.ledger-shell .ledger-nav {
+  background: rgba(255,254,250,.94) !important;
+  border: 1px solid var(--line) !important;
+  box-shadow: 0 8px 28px rgba(25,35,31,.09) !important;
+  backdrop-filter: blur(20px);
+}
+.ledger-shell input:focus, .ledger-shell select:focus, .ledger-shell textarea:focus {
+  --tw-ring-color: #8cc95a !important;
+  border-color: #8cc95a !important;
+}
+@media (max-width: 640px) {
+  .ledger-shell .ledger-banner { border-radius: 1rem !important; }
+}
