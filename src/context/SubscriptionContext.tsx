@@ -107,7 +107,7 @@ export const SubscriptionProvider: React.FC<{ children: React.ReactNode }> = ({ 
   });
 
   const [deviceFrameMode, setDeviceFrameMode] = useState<boolean>(() => {
-    return localStorage.getItem('sub_alert_frame') !== 'false'; // default true
+    return false; // Use the responsive desktop layout by default
   });
 
   const [activeTab, setActiveTab] = useState<'dashboard' | 'subscriptions' | 'calendar' | 'analytics' | 'settings'>('dashboard');
